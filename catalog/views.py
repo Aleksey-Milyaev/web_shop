@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from catalog.models import Category, Product
 
 
 def get_home(request):

@@ -1,0 +1,31 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Электротовары",
+        "descriptions": "Большой выбор, низкие цены!!!"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Орг. техника",
+        "descriptions": "Компьютеры и переферия"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Розетка",
+        "descriptions": "Накладная, 16А",
+        "image": "",
+        "category": 1,
+        "price": 300.0,
+        "date_create": "2025-01-15",
+        "date_change": "2025-01-15"
+    }
+}
+]
