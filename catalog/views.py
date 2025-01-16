@@ -3,7 +3,12 @@ from catalog.models import Category, Product
 
 
 def get_home(request):
-    return render(request, 'catalog/home.html')
+    products = Product.objects.all()
+    context = {
+        'products': products
+    }
+
+    return render(request, 'catalog/home.html', context)
 
 
 def contacts(request):
@@ -14,3 +19,12 @@ def contacts(request):
         print(message)
         return HttpResponse(f'{name}, с номером {phone}, ваше сообщение получено!')
     return render(request, 'catalog/contacts.html')
+
+
+def product_detail(request, product_id):
+    product = Product.objects.get(id=product_id)
+    context = {
+        'product': product
+    }
+
+    return render(request, 'catalog/product_detail.html', context)
